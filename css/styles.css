@@ -6,6 +6,10 @@
     --body-color: #918ca4;
 }
 
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
 /* Topography */
 html{
     font-size: 62.5%;
@@ -150,8 +154,17 @@ a{
     height: 40px;
 }
 
+.icon--small{
+    width: 20px;
+    height: 20px;
+}
+
 .icon--primary{
     fill: var(--primary-color);
+}
+
+.icon--white{
+    fill:#fff;
 }
 
 .icon-container{
@@ -162,5 +175,60 @@ a{
     border-radius: 100%;
     justify-content: center;
     align-items: center;
+}
+
+/* Buttons */
+.btn{
+    background: none;
+    border-radius: 40px;
+    border: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    padding: 2rem 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.btn--block{
+    width: 100%;
+    display: inline-block;
+}
+
+.btn--secondary{
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+.btn--secondary:hover{
+    background: #81ecff;
+}
+
+.btn--accent{
+    background: var(--accent-color);
+    color: #fff;
+}
+
+.btn--accent:hover{
+    background: #ff7a57;
+}
+
+.btn--outline{
+    background: none;
+    border: 2px solid var(--heading-color);
+    color: var(--heading-color);
+}
+
+.btn--outline:hover{
+    color: #fff;
+    background: var(--heading-color);
+}
+
+@media screen and (min-width:1024px){
+    .btn{
+        font-size: 1.5rem;
+    }
 }
 
