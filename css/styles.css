@@ -134,7 +134,6 @@ a{
 .list{
     list-style: none;
     padding-left: 0;
-    color: var(--heading-color);
 }
 
 .list--inline .list__item{
@@ -198,7 +197,7 @@ a{
     font-size: 1.8rem;
     font-weight: 600;
     margin: 1rem 0;
-    padding: 2rem 3rem;
+    padding: 2rem 4vw;
     text-transform: uppercase;
     text-align: center;
     white-space: nowrap;
@@ -281,6 +280,7 @@ a{
     border: 0;
     flex-grow: 1;
     padding: 1.5rem 2rem;
+    width: 0;
 }
 
 .input-group .btn{
@@ -479,7 +479,7 @@ a{
 
 @media screen and (min-width:768px){
     .grid--1x2{
-     grid-template:  1fr / repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(10rem, 1fr));
     }
 
 }
@@ -493,11 +493,12 @@ a{
 /* Testimonials */
 
 .testimonial{
-    padding: 3rem 6rem;
+    padding: 3rem 0;
 }
 
 .testimonial__image{
     position: relative;
+    margin: 0 5rem;
 }
 
 .testimonial__image  img{
@@ -513,6 +514,10 @@ a{
 @media screen and (min-width:768px){
     .testimonial{
         padding: 3rem;
+    }
+
+    .testimonial__image{
+        margin: 0;
     }
 
     .testimonial .quote,.testimonial .quote__author {
@@ -549,6 +554,7 @@ a{
 .callout__content{
     text-align: center;
 }
+
 
 @media screen and (min-width:768px){
 
@@ -737,12 +743,13 @@ a{
 
 .block-domain__prices{
     display: grid;
-    grid-template: repeat(2, 6rem)/ repeat(3, 1fr);
+    grid-template: repeat(2, 6rem)/ repeat(2, 1fr);
     font-size: 2rem;
     font-weight: 600;
     justify-items: center;
     max-width: 730px;
     margin: 0 auto;
+    color: var(--heading-color);
 }
 
 @media screen and (min-width:768px){
@@ -770,6 +777,8 @@ a{
     margin: 12rem 0;
 }
 
+
+
 .feature__content{
     flex-direction: column;
 }
@@ -786,6 +795,10 @@ a{
 @media screen and (min-width:768px){
     .feature:nth-of-type(even) .feature__content{
         order: 2;
+    }
+
+    .feature-1{
+        margin-top: 6rem;
     }
 }
 
@@ -916,4 +929,8 @@ a{
     }
 }
 
+
+.container .callout-signup{
+    transform: translateY(5rem);
+}
 
